@@ -1,5 +1,14 @@
+import allure
+from allure_commons.types import Severity
 from selene import browser, by, be
 
+
+@allure.tag("web")
+@allure.severity(Severity.MINOR)
+@allure.label("owner", "Irina_Kirillova")
+@allure.feature("Задачи в репозитории")
+@allure.story("Авторизованный пользователь может создать задачу в репозитории")
+@allure.link("https://github.com", name="Testing")
 def test_search_issue():
     #GIVEN
     browser.open("https://github.com")
